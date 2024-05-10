@@ -21,19 +21,21 @@ level = input("Pick a level. Type \'easy\' or \'hard\': ")
 
 if level == "easy":
     guesses = 10
+    user_guesses = 10
 elif level == "hard":
     guesses = 5
+    user_guesses = 5
 
 #For loop to limit number of times user can guess
 i = 0
-while i < guesses:
-    print("You have " + str(guesses) + " guesses remaining to guess the number.")
+while i <= guesses:
+    print("You have " + str(user_guesses) + " guesses remaining to guess the number.")
     #Ask for user's guess
     user_guess = int(input("Make a guess: "))
     if user_guess != answer:
         i = i + 1
-        guesses = guesses - 1
-        if guesses == 0:
+        user_guesses = user_guesses - 1
+        if user_guesses == 0:
             print("You're out of guesses. Game over.")
             break
         elif user_guess < answer:
