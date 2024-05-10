@@ -9,9 +9,6 @@ import random
 #Generate a random number
 answer = random.randint(1,100)
 
-#Testing line
-print("The answer is " + str(answer))
-
 #Intro statements
 print("Welcome to the number guessing game!")
 print("I'm thinking of a number between 1 and 100.")
